@@ -40,7 +40,7 @@ public class Quickchat {
         if (user.checkCellPhoneNumber()) {
             System.out.println("Cell phone number successfully added.");
         } else {
-            // Text matched exactly to Image 12 rubric
+            // If user doesnt start by entering the international code, the number format will be wrong
             System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         }
 
