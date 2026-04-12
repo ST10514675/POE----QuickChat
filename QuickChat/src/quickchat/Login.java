@@ -7,82 +7,84 @@ package quickchat;
 import java.util.regex.Pattern;
 
 public class Login {
-    // These are my global variables to store user info
-    String firstName;
-    String lastName;
-    String username;
-    String password;
-    String phoneNumber;
+    // these are for storing the user details
+    String name;
+    String surname;
+    String user;
+    String pass;
+    String cell;
 
-    // Standard setters to save the data from the main class
-    public void setFirstName(String fName) {
-        this.firstName = fName;
+    // saving the names and stuff from the main part
+    public void setFirstName(String f) {
+        this.name = f;
     }
 
-    public void setLastName(String lName) {
-        this.lastName = lName;
+    public void setLastName(String l) {
+        this.surname = l;
     }
 
-    public void setUsername(String uName) {
-        this.username = uName;
+    public void setUsername(String u) {
+        this.user = u;
     }
 
-    public void setPassword(String pWord) {
-        this.password = pWord;
+    public void setPassword(String p) {
+        this.pass = p;
     }
 
-    public void setPhoneNumber(String pNumber) {
-        this.phoneNumber = pNumber;
+    public void setPhoneNumber(String num) {
+        this.cell = num;
     }
 
-    // This method checks if the username follows the rules
+    // this part checks if the username is okay
     public boolean checkUserName() {
-        if (username == null) return false;
+        if (user == null) {
+            return false;
+        }
         
-        // Rules: must have underscore and max 5 characters
-        boolean hasUnderscore = username.contains("_");
-        boolean isShortEnough = username.length() <= 5;
+        // checking for underscore and that its not too long
+        boolean hasUnderscore = user.contains("_");
+        boolean shortEnough = user.length() <= 5;
         
-        return hasUnderscore && isShortEnough;
+        if (hasUnderscore && shortEnough) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    // Checking if the password is complex enough for the rubric
+    // making sure the password is strong enough for the project
     public boolean checkPasswordComplexity() {
-        if (password == null || password.length() < 8) {
+        if (pass == null || pass.length() < 8) {
             return false;
         }
 
-        // I used flags here to make sure every single rule is met
-        boolean foundCap = false;
-        boolean foundNum = false;
-        boolean foundSpec = false;
+        boolean cap = false;
+        boolean num = false;
+        boolean spec = false;
 
-        for (int i = 0; i < password.length(); i++) {
-            char c = password.charAt(i);
+        // go through every letter to check for caps and numbers
+        for (int i = 0; i < pass.length(); i++) {
+            char c = pass.charAt(i);
 
-            if (Character.isUpperCase(c)) foundCap = true;
-            if (Character.isDigit(c)) foundNum = true;
-            if (!Character.isLetterOrDigit(c)) foundSpec = true;
+            if (Character.isUpperCase(c)) cap = true;
+            if (Character.isDigit(c)) num = true;
+            if (!Character.isLetterOrDigit(c)) spec = true;
         }
 
-        // All three must be true to pass
-        return foundCap && foundNum && foundSpec;
+        return cap && num && spec;
     }
 
-    // Using regex to check the phone number format
+    // check if phone starts with +27
     public boolean checkCellPhoneNumber() {
-        // Regex for South African international code +27 and 9 digits
-        String cellPattern = "^\\+27\\d{9}$";
+        if (cell == null) return false;
         
-        if (phoneNumber == null) {
-            return false;
-        }
-
-        return Pattern.matches(cellPattern, phoneNumber);
+        String pattern = "^\\+27\\d{9}$";
+        return Pattern.matches(pattern, cell);
     }
 
-    // This runs the checks and returns the correct messages for the POE
+    // this checks everything and gives back the message for the rubric
     public String registerUser() {
+        
         if (!checkUserName()) {
             return "Username is not correctly formated, please ensure that your username contains an underscore and is no more than 5 characters in length.";
         }
@@ -91,24 +93,26 @@ public class Login {
             return "Password is not correctly formatted, please ensure that the password contains at least 8 characters, a capital letter, a number and a special character.";
         }
 
-        // Success message required by the rubric
         return "The two above conditions have been met, and the user has been registered successfully.";
     }
 
-    // Basic login check to see if details match
-    public boolean loginUser(String u, String p) {
-        if (u == null || p == null) return false;
+    // just checks if the login info matches what we saved
+    public boolean loginUser(String uIn, String pIn) {
+        if (uIn == null || pIn == null) return false;
         
-        return u.equals(username) && p.equals(password);
+        if (uIn.equals(user) && pIn.equals(pass)) {
+            return true;
+        }
+        return false;
     }
 
-    // Returns the final welcome message
-    public String returnLoginStatus(boolean loggedIn) {
-        if (loggedIn) {
-            // Added the comma after first name as per the image
-            return "Welcome " + firstName + ", " + lastName + " it is great to see you again.";
+    // showing the welcome message if they got in
+    public String returnLoginStatus(boolean ok) {
+        if (ok) {
+            // make sure to keep the comma and the names
+            return ("Welcome " + name + "  " + surname + " it is great to see you again.");
         } else {
-            return "Username or password incorrect, please try again.";
+            return ("Username or password incorrect, please try again.");
         }
     }
 }
