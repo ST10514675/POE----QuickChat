@@ -14,7 +14,7 @@ public class Quickchat {
         Scanner scan = new Scanner(System.in);
         Login user = new Login();
 
-        // Registration Heading
+        // Registration Heading , basically shows the user the name of the app 
         System.out.println("QUICKCHAT REGISTRATION");
 
         System.out.print("First name: ");
