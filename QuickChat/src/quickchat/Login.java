@@ -82,7 +82,7 @@ public class Login {
         return Pattern.matches(pattern, cell);
     }
 
-    // this checks everything and gives back the message for the rubric
+    // this checks everything and gives back the message
     public String registerUser() {
         
         if (!checkUserName()) {
