@@ -109,7 +109,7 @@ public class Login {
     // showing the welcome message if they got in
     public String returnLoginStatus(boolean ok) {
         if (ok) {
-            // make sure to keep the comma and the names
+            // puts your name and welcomes you when succesfull
             return ("Welcome " + name + "  " + surname + " it is great to see you again.");
         } else {
             return ("Username or password incorrect, please try again.");
