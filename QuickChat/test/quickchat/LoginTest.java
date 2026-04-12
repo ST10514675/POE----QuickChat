@@ -63,11 +63,11 @@ public class LoginTest {
 
     @Test
     public void testLoginSuccessful() {
-        // save a user first
+        // you can use your own username
         login.setUsername("kyl_1");
         login.setPassword("Ch&&sec@ke99!");
         
-        // try to login with same stuff
+        // try to login with same stuff you inserted
         boolean result = login.loginUser("kyl_1", "Ch&&sec@ke99!");
         assertTrue("login should work here", result);
     }
@@ -77,7 +77,7 @@ public class LoginTest {
         login.setUsername("kyl_1");
         login.setPassword("Ch&&sec@ke99!");
         
-        // use the wrong password
+        // use the wrong password, and the system wont let you in
         boolean result = login.loginUser("kyl_1", "wrong_password");
         assertFalse("should not let me in", result);
     }
