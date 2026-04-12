@@ -6,7 +6,7 @@ package quickchat;
 
 import java.util.Scanner;
 
-// main class running the QuickChat application
+// This is my main class for the Quickchat 
 public class Quickchat {
 
     public static void main(String[] args) {
