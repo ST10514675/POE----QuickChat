@@ -13,7 +13,7 @@ public class LoginTest {
 
     private Login login;
 
-    // this runs before every test to make a new login
+    // this runs before every test to make a new loginss
     @Before
     public void setUp() {
         login = new Login();
