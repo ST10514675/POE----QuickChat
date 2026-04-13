@@ -8,6 +8,7 @@ import java.util.regex.Pattern;
 
 public class Login {
     // these are for storing the user details
+    // added a string for name and surname, to allow the user to input them when registering.
     String name;
     String surname;
     String user;
