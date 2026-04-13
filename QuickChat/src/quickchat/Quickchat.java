@@ -36,7 +36,7 @@ public class Quickchat {
         String msg = user.registerUser();
         System.out.println("\n" + msg);
 
-        // Rubric Check: Specific Cell Phone status message (Image 12)
+        // output gives this message depending on if the number you entered is correct or not
         if (user.checkCellPhoneNumber()) {
             System.out.println("Cell phone number successfully added.");
         } else {
