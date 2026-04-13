@@ -36,7 +36,7 @@ public class Quickchat {
         String msg = user.registerUser();
         System.out.println("\n" + msg);
 
-        // Rubric Check: Specific Cell Phone status message (Image 12)
+        // if your cellphone number is correct it will display this when the project runs 
         if (user.checkCellPhoneNumber()) {
             System.out.println("Cell phone number successfully added.");
         } else {
@@ -44,7 +44,7 @@ public class Quickchat {
             System.out.println("Cell phone number incorrectly formatted or does not contain international code.");
         }
 
-        // Logic Check: Only proceed if registration was successful
+        // Only proceed if registration was successful, then you will have to Login
         if (msg.contains("successfully")) {
 
             System.out.println("QUICKCHAT LOGIN");

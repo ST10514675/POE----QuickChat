@@ -15,7 +15,7 @@ public class Login {
     String pass;
     String cell;
 
-    // saving the names and stuff from the main part
+    // saving the names and stuff from the main part, stores the user info to be precise
     public void setFirstName(String f) {
         this.name = f;
     }

@@ -63,7 +63,7 @@ public class LoginTest {
 
     @Test
     public void testLoginSuccessful() {
-        // you can use your own username
+        // you can use your own username, include the underscore 
         login.setUsername("kyl_1");
         login.setPassword("Ch&&sec@ke99!");
         
