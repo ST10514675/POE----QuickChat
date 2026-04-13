@@ -53,7 +53,7 @@ public class Login {
         }
     }
 
-    // making sure the password is strong enough for the project
+    // add the following to ensure that the password is strong and secure when creating your account
     public boolean checkPasswordComplexity() {
         if (pass == null || pass.length() < 8) {
             return false;
