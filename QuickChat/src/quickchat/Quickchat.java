@@ -55,7 +55,7 @@ public class Quickchat {
             System.out.print("Password: ");
             String p = scan.nextLine();
 
-            // Run login check
+            // Run login check.
             boolean logged = user.loginUser(u, p);
 
             // Display result from returnLoginStatus
