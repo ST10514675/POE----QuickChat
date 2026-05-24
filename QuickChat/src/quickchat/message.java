@@ -38,7 +38,7 @@ public class message {
         this.messageHash = createMessageHash();
     }
 
-    // Secondary Constructor: Used when we already have an ID ,helpful for testing
+    // Secondary Constructor: Used when we already have an ID ,helpful for testing.
     public message(int messageNumber, String recipient, String message, String messageID) {
         this.messageNumber = messageNumber;
         this.recipient = recipient;
