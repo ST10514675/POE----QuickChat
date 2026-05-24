@@ -11,8 +11,8 @@ import java.io.IOException;
 
 
 // QuickChat Message Class.
-//This class handles individual message data, hash generation, 
-//and keeping track of what has been sent.
+// This class handles individual message data, hash generation,
+// and keeping track of what has been sent.
 
 public class message {
 
@@ -32,13 +32,13 @@ public class message {
         this.messageNumber = messageNumber;
         this.recipient = recipient;
         this.message = message;
-        
+
         // These are automatically created as soon as the object is created
         this.messageID = generateMessageID();
         this.messageHash = createMessageHash();
     }
 
-    // Secondary Constructor: Used when we already have an ID ,helpful for testing.
+    // Secondary Constructor: Used when we already have an ID , helpful for testing.
     public message(int messageNumber, String recipient, String message, String messageID) {
         this.messageNumber = messageNumber;
         this.recipient = recipient;
@@ -63,22 +63,33 @@ public class message {
         return false;
     }
 
-    // Validates that the phone number starts with the plus symbol.
+    // Validates that the phone number starts with the plus symbol and is no more than 10 characters
     public String checkRecipientCell() {
-        if (recipient.startsWith("+")) {
+        if (recipient.startsWith("+") && recipient.length() <= 10) {
             return "Cell phone number successfully captured.";
         } else {
             return "Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.";
         }
     }
 
+    // Checks that the message doesn't go over the 250 character limit
+    public String checkMessageLength() {
+        if (message.length() <= 250) {
+            return "Message ready to send.";
+        } else {
+            // Calculate exactly how many characters over the limit the message is
+            int excess = message.length() - 250;
+            return "Message exceeds 250 characters by " + excess + "; please reduce the size.";
+        }
+    }
+
     // Logic to build the unique message hash
     public String createMessageHash() {
-        
+
         String idPrefix = messageID.substring(0, 2);
 
         String[] parts = message.trim().split(" ");
-        
+
         String firstWordClean = parts[0].replaceAll("[^a-zA-Z0-9]", "").toUpperCase();
         String lastWordClean = parts[parts.length - 1].replaceAll("[^a-zA-Z0-9]", "").toUpperCase();
 
@@ -93,16 +104,16 @@ public class message {
             totalMessagesSent++;
             sentMessages.add(new String[]{messageID, messageHash, recipient, message});
             return "Message successfully sent";
-        } 
+        }
         // Choice 2: Prompt for deletion
         else if (choice.equals("2")) {
             return "Press 0 to delete the message";
-        } 
-        // Choice 3: Save it to a file
+        }
+        // Choice 3: Save it to a file - we store without adding to sentMessages again to avoid duplicates
         else if (choice.equals("3")) {
             storeMessage();
             return "Message successfully stored";
-        } 
+        }
         // Anything else is wrong
         else {
             return "Invalid option.";
@@ -137,12 +148,11 @@ public class message {
         return totalMessagesSent;
     }
 
-    // Logic to save all sent messages
+    // Logic to save all sent messages to a JSON file - this is the research component
     public void storeMessage() {
-        // Add current message to the list first
+        // Add this message to the stored list before writing to the file
         sentMessages.add(new String[]{messageID, messageHash, recipient, message});
-        
-        
+
         String jsonBuilder = "[\n";
         for (int i = 0; i < sentMessages.size(); i++) {
             String[] m = sentMessages.get(i);
@@ -152,8 +162,7 @@ public class message {
             jsonBuilder += "    \"recipient\": \"" + m[2] + "\",\n";
             jsonBuilder += "    \"message\": \"" + m[3] + "\"\n";
             jsonBuilder += "  }";
-            
-            
+
             if (i < sentMessages.size() - 1) {
                 jsonBuilder += ",";
             }
@@ -161,7 +170,6 @@ public class message {
         }
         jsonBuilder += "]";
 
-     
         try {
             FileWriter writer = new FileWriter("messages.json");
             writer.write(jsonBuilder);
