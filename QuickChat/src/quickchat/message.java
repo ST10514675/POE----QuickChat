@@ -63,9 +63,9 @@ public class message {
         return false;
     }
 
-    // Validates that the phone number starts with the plus symbol and is no more than 10 characters
+    // Validates that the phone number starts with the plus symbol.
     public String checkRecipientCell() {
-        if (recipient.startsWith("+") && recipient.length() <= 10) {
+        if (recipient.startsWith("+")) {
             return "Cell phone number successfully captured.";
         } else {
             return "Cell phone number is incorrectly formatted or does not contain an international code. Please correct the number and try again.";
