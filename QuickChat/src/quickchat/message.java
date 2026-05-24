@@ -14,9 +14,9 @@ import java.io.IOException;
 //This class handles individual message data, hash generation, 
 //and keeping track of what has been sent.
 
-public class Message {
+public class message {
 
-    // This are the fields to hold the details for a single message
+    // This are the fields to hold the details for single message
     private String messageID;
     private int messageNumber;
     private String recipient;
@@ -28,7 +28,7 @@ public class Message {
     private static int totalMessagesSent = 0;
 
     // Main Constructor: we use this when we create a brand new message
-    public Message(int messageNumber, String recipient, String message) {
+    public message(int messageNumber, String recipient, String message) {
         this.messageNumber = messageNumber;
         this.recipient = recipient;
         this.message = message;
@@ -39,7 +39,7 @@ public class Message {
     }
 
     // Secondary Constructor: Used when we already have an ID ,helpful for testing
-    public Message(int messageNumber, String recipient, String message, String messageID) {
+    public message(int messageNumber, String recipient, String message, String messageID) {
         this.messageNumber = messageNumber;
         this.recipient = recipient;
         this.message = message;
@@ -198,4 +198,4 @@ public class Message {
     public int getMessageNumber() {
         return messageNumber;
     }
-} 
+}
