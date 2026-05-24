@@ -55,7 +55,7 @@ public class message {
         return String.valueOf(randomNum);
     }
 
-    // Simple check to ensure the ID didn't exceed the 10 character limit
+    // Simple check to ensure the ID didn't exceed the 10 character limit.
     public boolean checkMessageID() {
         if (messageID.length() <= 10) {
             return true;
