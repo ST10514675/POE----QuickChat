@@ -18,7 +18,7 @@ public class MessageTest {
 
     @Test
     public void testMessageIDLengthSuccess() {
-        // Test 1: Making sure the generated ID doesn't go over the 10 character limit
+        // Test 1: Making sure the generated ID doesn't go over the 10 character limit.
         message msg = new message(0, "+27718693002", "Hi Mike, can you join us for dinner tonight?");
         assertTrue("Message ID should not be more than 10 characters", msg.checkMessageID());
     }
