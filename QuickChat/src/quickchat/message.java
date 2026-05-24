@@ -27,7 +27,7 @@ public class message {
     private static ArrayList<String[]> sentMessages = new ArrayList<>();
     private static int totalMessagesSent = 0;
 
-    // Main Constructor: we use this when we create a brand new message
+    // Main Constructor: we use this when we create brand new message
     public message(int messageNumber, String recipient, String message) {
         this.messageNumber = messageNumber;
         this.recipient = recipient;
