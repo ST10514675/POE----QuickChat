@@ -33,7 +33,7 @@ public class message {
         this.recipient = recipient;
         this.message = message;
         
-        // These are automatically created as soon as the object is created.
+        // These are automatically created as soon as the object is created
         this.messageID = generateMessageID();
         this.messageHash = createMessageHash();
     }
