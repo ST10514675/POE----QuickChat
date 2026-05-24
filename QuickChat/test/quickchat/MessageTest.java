@@ -100,7 +100,7 @@ public class MessageTest {
 
     @Test
     public void testReturnTotalMessages() {
-        // Test 11, Ensuring it tracks how many messages were sent
+        // Test 11, Ensuring it tracks how many messages were sent.
         message.resetMessages();
         
         // Sending first message
