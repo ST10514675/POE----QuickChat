@@ -10,7 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 
-// QuickChat Message Class
+// QuickChat Message Class.
 //This class handles individual message data, hash generation, 
 //and keeping track of what has been sent.
 
