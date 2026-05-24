@@ -31,7 +31,7 @@ public class MessageTest {
         System.out.println("Message ID generated: " + msg.getMessageID());
     }
 
-    //Phone Number Validation Test
+    //Phone Number Validation Test.
 
     @Test
     public void testCheckRecipientCellSuccess() {
