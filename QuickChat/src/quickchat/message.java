@@ -23,7 +23,7 @@ public class message {
     private String message;
     private String messageHash;
 
-    // Static variables to keep track of the history while the app is running
+    // Static variables to keep track of the history while the app is running.
     private static ArrayList<String[]> sentMessages = new ArrayList<>();
     private static int totalMessagesSent = 0;
 
