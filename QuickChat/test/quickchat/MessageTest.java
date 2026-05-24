@@ -63,7 +63,7 @@ public class MessageTest {
         assertTrue("Message exceeds 250 characters by 10; please reduce the size.", longMessage.length() > 250);
     }
 
-    //Hashing Logic Tests
+    //Hashing Logic Tests.
 
     @Test
     public void testMessageHashCorrect() {
