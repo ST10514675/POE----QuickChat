@@ -1,5 +1,7 @@
 name: Part 2 Tests
-on: [push]
+on: 
+  push:
+    branches : [ "khanbanTasks"]
 jobs:
   test:
     runs-on: ubuntu-latest
