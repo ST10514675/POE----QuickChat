@@ -85,7 +85,7 @@ public class MessageTest {
 
     @Test
     public void testSentMessageDisregard() {
-        // Test 9, Choice '2' should prompt the user to delete/disregard
+        // Test 9, Choice '2' should prompt the user to delete/disregard.
         message msg = new message(1, "08575975889", "Hi Keegan, did you receive the payment?");
         assertEquals("Press 0 to delete the message", msg.sentMessage("2"));
     }
