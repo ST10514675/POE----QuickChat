@@ -12,7 +12,7 @@ public class Quickchat {
         Scanner scan = new Scanner(System.in);
         Login user = new Login();
 
-        // Registration Heading , basically shows the user the name of the app ,this is the first thing that will appear before the program runs
+        // Registration Heading , basically shows the user the name of the app ,this is the first thing that will appear before the program runs.
         System.out.println("QUICKCHAT REGISTRATION");
         System.out.print("First name: ");
         user.setFirstName(scan.nextLine());
