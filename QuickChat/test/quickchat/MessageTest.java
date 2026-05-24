@@ -25,7 +25,7 @@ public class MessageTest {
 
     @Test
     public void testMessageIDGenerated() {
-        // Test 2: Making sure an ID actually gets created and isn't null
+        // Test 2: Making sure an ID actually gets created and isn't null.
         message msg = new message(0, "+27718693002", "Hi Mike, can you join us for dinner tonight?");
         assertNotNull("Message ID should be generated", msg.getMessageID());
         System.out.println("Message ID generated: " + msg.getMessageID());
