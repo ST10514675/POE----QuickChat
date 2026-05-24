@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 /**
  * Unit Tests for the Message Class
- * This class runs a battery of tests to ensure our message logic, 
+ * This class runs a battery of tests to ensure our message logic
  * phone validation, and hashing work according to the requirements.
  */
 public class MessageTest {
