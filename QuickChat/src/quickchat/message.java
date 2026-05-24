@@ -63,7 +63,7 @@ public class message {
         return false;
     }
 
-    // Validates that the phone number starts with the plus symbol
+    // Validates that the phone number starts with the plus symbol.
     public String checkRecipientCell() {
         if (recipient.startsWith("+")) {
             return "Cell phone number successfully captured.";
