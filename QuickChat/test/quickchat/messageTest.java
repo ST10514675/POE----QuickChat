@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 
 /**
- * Unit Tests for the Message Class (Parts 2 & 3)
+ * Unit Tests for the Message Class 
  *
  * Covers:
  *  - Message ID generation and length
