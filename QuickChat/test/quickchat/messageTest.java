@@ -53,11 +53,9 @@ public class messageTest {
         assertNotNull("Message ID should be generated", msg.getMessageID());
         System.out.println("Message ID generated: " + msg.getMessageID());
     }
-
     
     // Recipient Cell Number Validation Tests
     
-
     @Test
     public void testCheckRecipientCellSuccess() {
         // A number starting with '+' should be accepted
@@ -78,9 +76,8 @@ public class messageTest {
         );
     }
 
-    // =========================================================================
     // Message Length Tests
-    // =========================================================================
+    
 
     @Test
     public void testMessageLengthSuccess() {
@@ -99,10 +96,9 @@ public class messageTest {
             msg.checkMessageLength()
         );
     }
-
-    // =========================================================================
+    
     // Message Hash Tests
-    // =========================================================================
+    
 
     @Test
     public void testMessageHashCorrect() {
@@ -113,9 +109,9 @@ public class messageTest {
         assertEquals("00:0:HITONIGHT", msg.getMessageHash());
     }
 
-    // =========================================================================
+    
     // Send / Disregard / Store Action Tests
-    // =========================================================================
+    
 
     @Test
     public void testSentMessageSend() {
