@@ -134,9 +134,8 @@ public class messageTest {
         assertEquals("Message successfully stored.", msg.sentMessage("3"));
     }
 
-    // =========================================================================
     // Total Messages Counter Test
-    // =========================================================================
+    
 
     @Test
     public void testReturnTotalMessages() {
@@ -150,7 +149,7 @@ public class messageTest {
         assertEquals(2, msg1.returnTotalMessages());
     }
 
-    // =========================================================================
+    
     // Part 3 Tests — Array population, searching, deleting, reporting
     //
     // Test data (from PoE brief):
@@ -160,7 +159,7 @@ public class messageTest {
     //   Message 3: +27834484567  "Yohoooo, I am at your gate."                   → Disregard
     //   Message 4: 0838884567    "It is dinner time !"                            → Sent
     //   Message 5: +27838884567  "Ok, I am leaving without you."                 → Stored
-    // =========================================================================
+    
 
     @Test
     public void testSentMessagesArrayPopulated() {
