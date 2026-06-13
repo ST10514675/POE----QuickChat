@@ -51,10 +51,9 @@ public class Quickchat {
             return;
         }
 
-        // ---------------------------------------------------------------
         // LOGIN
-        // ---------------------------------------------------------------
-        System.out.println("\n===== QUICKCHAT LOGIN =====");
+  
+        System.out.println("\n QUICKCHAT LOGIN");
         System.out.print("Username: ");
         String enteredUsername = scan.nextLine();
         System.out.print("Password: ");
