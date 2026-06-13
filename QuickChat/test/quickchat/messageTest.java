@@ -25,8 +25,7 @@ import java.util.ArrayList;
  *  - Total messages counter
  *  - Part 3: array population, longest message, search by ID,
  *    search by recipient, delete by hash, and full report
- *
- * Test data matches the PoE brief exactly.
+ 
  */
 public class messageTest {
 
@@ -36,9 +35,9 @@ public class messageTest {
         message.resetMessages();
     }
 
-    // =========================================================================
+    
     // Message ID Tests
-    // =========================================================================
+   
 
     @Test
     public void testMessageIDLengthSuccess() {
