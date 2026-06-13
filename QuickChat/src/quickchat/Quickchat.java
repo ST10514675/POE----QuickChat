@@ -21,10 +21,7 @@ public class Quickchat {
         Scanner scan = new Scanner(System.in);
         Login user = new Login();
 
-        // ---------------------------------------------------------------
-        // REGISTRATIONs
-        // ---------------------------------------------------------------
-        System.out.println("===== QUICKCHAT REGISTRATION =====");
+        System.out.println("QUICKCHAT REGISTRATION");
         System.out.print("First name: ");
         user.setFirstName(scan.nextLine());
         System.out.print("Last name: ");
@@ -40,7 +37,7 @@ public class Quickchat {
         String registrationMsg = user.registerUser();
         System.out.println("\n" + registrationMsg);
 
-        // Show phone validation message separately (as required by the rubric)
+        // Showing phone validation message separately 
         if (user.checkCellPhoneNumber()) {
             System.out.println("Cell phone number successfully added.");
         } else {
