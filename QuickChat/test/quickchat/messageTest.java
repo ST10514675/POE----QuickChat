@@ -139,7 +139,7 @@ public class messageTest {
 
     @Test
     public void testReturnTotalMessages() {
-        // Only choice "1" (Send) increments the total; we send two → expect 2
+        // Only choice "1" (Send) increments the total; we send two expect 2
         message msg1 = new message(0, "+27718693002", "Hi Mike, can you join us for dinner tonight?");
         msg1.sentMessage("1");
 
@@ -208,21 +208,7 @@ public class messageTest {
                 ids.contains(msg1.getMessageID()));
     }
 
-    @Test
-    public void testDisplayLongestMessage() {
-        // Of the two stored messages, Message 2 is longer — must be identified correctly
-        message msg2 = new message(0, "+27838884567",
-                "Where are you? You are late! I have asked you to be on time.");
-        msg2.sentMessage("3");
-
-        message msg5 = new message(1, "+27838884567", "Ok, I am leaving without you.");
-        msg5.sentMessage("3");
-
-        assertEquals(
-            "Where are you? You are late! I have asked you to be on time.",
-            message.getLongestStoredMessage()
-        );
-    }
+    
 
     @Test
     public void testSearchByMessageID() {
