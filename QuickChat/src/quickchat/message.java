@@ -55,9 +55,9 @@ public class message {
         storedMessages.addAll(readStoredMessages());
     }
 
-    // -------------------------------------------------------------------------
-    // Constructors
-    // -------------------------------------------------------------------------
+    
+    
+    
 
     /** Main constructor — auto-generates the message ID. */
     public message(int messageNumber, String recipient, String messageText) {
@@ -80,9 +80,7 @@ public class message {
         this.messageHash   = createMessageHash();
     }
 
-    // -------------------------------------------------------------------------
-    // Private helpers
-    // -------------------------------------------------------------------------
+    
 
     /** Generates a random 10-digit numeric message ID. */
     private String generateMessageID() {
@@ -91,9 +89,6 @@ public class message {
         return String.valueOf(randomNum);
     }
 
-    // -------------------------------------------------------------------------
-    // Required Methods (rubric spec)
-    // -------------------------------------------------------------------------
 
     /** Ensures the message ID is no more than 10 characters long. */
     public boolean checkMessageID() {
