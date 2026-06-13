@@ -115,7 +115,7 @@ public class Quickchat {
                             System.out.println(newMessage.checkRecipientCell());
                             System.out.println(newMessage.checkMessageLength());
 
-                            // Only continue if recipient has international code AND message fits
+                            // Only continue if recipient has international code and message fits
                             if (recipient.startsWith("+") && messageText.length() <= 250) {
 
                                 System.out.println("\n1) Send Message");
