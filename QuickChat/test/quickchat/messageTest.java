@@ -54,9 +54,9 @@ public class messageTest {
         System.out.println("Message ID generated: " + msg.getMessageID());
     }
 
-    // =========================================================================
+    
     // Recipient Cell Number Validation Tests
-    // =========================================================================
+    
 
     @Test
     public void testCheckRecipientCellSuccess() {
