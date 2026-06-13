@@ -12,7 +12,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- * QuickChat Main Application Entry Point.
+ * QuickChat Main Application Entry Point, basically what the user must first do
  * Handles registration, login, and the full message menu (Parts 1–3).
  */
 public class Quickchat {
