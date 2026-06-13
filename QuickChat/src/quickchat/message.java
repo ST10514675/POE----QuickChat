@@ -33,24 +33,24 @@ public class message {
     private String messageText;
     private String messageHash;
 
-    // -------------------------------------------------------------------------
-    // Part 3 — Named static arrays as required by the rubric.
-    // All populated dynamically (no hard-coding).
-    // -------------------------------------------------------------------------
+    
+    // Named static arrays as required by the rubric.
+    // 
+    
     private static ArrayList<String[]> sentMessages        = new ArrayList<>();
     private static ArrayList<String[]> disregardedMessages = new ArrayList<>();
-    private static ArrayList<String[]> storedMessages      = new ArrayList<>();  // loaded from JSON
+    private static ArrayList<String[]> storedMessages      = new ArrayList<>();  
     private static ArrayList<String>   messageHashes       = new ArrayList<>();
     private static ArrayList<String>   messageIDs          = new ArrayList<>();
 
     private static int totalMessagesSent = 0;
 
-    // -------------------------------------------------------------------------
+    
     // Static initializer — loads any previously stored messages from
     // messages.json into the storedMessages array when the class is first loaded.
-    // This ensures the in-memory list always reflects what is already on disk,
-    // even if the app has been restarted between sessions.
-    // -------------------------------------------------------------------------
+    // This ensures the in-memory list always reflects what is already on disk
+  
+    
     static {
         storedMessages.addAll(readStoredMessages());
     }
