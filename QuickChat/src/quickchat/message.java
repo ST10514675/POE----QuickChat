@@ -20,7 +20,7 @@ import java.util.regex.Matcher;
 /**
  * QuickChat Message Class.
  * Handles individual message data, hash generation, JSON storage,
- * and all Part 3 array-based searching, deleting, and reporting features.
+ * and all Part 3 array-based searching, deleting, and reporting features
  */
 public class message {
 
