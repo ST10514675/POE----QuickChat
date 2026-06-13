@@ -134,7 +134,7 @@ public class messageTest {
         assertEquals("Message successfully stored.", msg.sentMessage("3"));
     }
 
-    // Total Messages Counter Test
+    // Total Messages Counter Test.
     
 
     @Test
