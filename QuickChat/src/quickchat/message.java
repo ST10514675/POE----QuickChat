@@ -268,7 +268,7 @@ public class message {
                 loaded.add(new String[]{id, hash, recip, msg});
             }
         } catch (IOException e) {
-            // File may not exist yet — return empty list silently
+           
         }
         return loaded;
     }
@@ -307,8 +307,6 @@ public class message {
             System.out.println("Error updating messages.json: " + e.getMessage());
         }
     }
-
-    // ---- Part 3 Feature Methods ----
 
     /**
      * a) Displays sender and recipient of all stored messages.
