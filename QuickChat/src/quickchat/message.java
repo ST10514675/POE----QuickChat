@@ -463,27 +463,27 @@ public class message {
         return output.toString();
     }
 
-    // -------------------------------------------------------------------------
+    
     // Getters for static arrays (used in tests)
-    // -------------------------------------------------------------------------
+    
     public static ArrayList<String[]> getSentMessages()        { return sentMessages; }
     public static ArrayList<String[]> getDisregardedMessages() { return disregardedMessages; }
     public static ArrayList<String[]> getStoredMessages()      { return storedMessages; }
     public static ArrayList<String>   getMessageHashes()       { return messageHashes; }
     public static ArrayList<String>   getMessageIDs()          { return messageIDs; }
 
-    // -------------------------------------------------------------------------
+    
     // Instance getters
-    // -------------------------------------------------------------------------
+    
     public String getMessageID()   { return messageID; }
     public String getRecipient()   { return recipient; }
     public String getMessage()     { return messageText; }
     public String getMessageHash() { return messageHash; }
     public int    getMessageNumber(){ return messageNumber; }
 
-    // -------------------------------------------------------------------------
+   
     // Test utility — resets all static state between unit tests
-    // -------------------------------------------------------------------------
+    
     public static void resetMessages() {
         sentMessages.clear();
         disregardedMessages.clear();
