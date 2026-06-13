@@ -24,9 +24,9 @@ import java.util.regex.Matcher;
  */
 public class message {
 
-    // -------------------------------------------------------------------------
+    
     // Instance fields for a single message
-    // -------------------------------------------------------------------------
+    
     private String messageID;
     private int messageNumber;
     private String recipient;
