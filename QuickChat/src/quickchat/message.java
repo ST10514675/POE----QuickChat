@@ -202,17 +202,14 @@ public class message {
         return totalMessagesSent;
     }
 
-    // -------------------------------------------------------------------------
+    
     // JSON Storage (Research component — attributed below)
-    // -------------------------------------------------------------------------
+   
 
     /**
      * Saves the current message to messages.json.
      * Also adds it to the storedMessages array and tracking lists.
-     *
      * JSON writing approach referenced from:
-     * Oracle Java Docs — FileWriter: https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html
-     * Baeldung — Writing to Files in Java: https://www.baeldung.com/java-write-to-file
      */
     public void storeMessage() {
         // Add to in-memory storedMessages array and tracking lists
@@ -240,17 +237,12 @@ public class message {
         System.out.println("Message stored in messages.json");
     }
 
-    // -------------------------------------------------------------------------
+    
     // Part 3 — Array population & feature methods
-    // -------------------------------------------------------------------------
+    
 
     /**
      * Reads messages.json and populates the storedMessages array.
-     * Uses regex to parse each JSON object block.
-     *
-     * Regex parsing approach referenced from:
-     * Baeldung — Java Regex: https://www.baeldung.com/java-regex-token-replacement
-     * Oracle Java Docs — Pattern: https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
      */
     public static ArrayList<String[]> readStoredMessages() {
         ArrayList<String[]> loaded = new ArrayList<>();
