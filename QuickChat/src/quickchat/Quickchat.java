@@ -50,7 +50,7 @@ public class Quickchat {
             scan.close();
             return;
         }
-
+        
         // LOGIN
   
         System.out.println("\n QUICKCHAT LOGIN");
@@ -62,12 +62,11 @@ public class Quickchat {
         boolean loggedIn = user.loginUser(enteredUsername, enteredPassword);
         System.out.println(user.returnLoginStatus(loggedIn));
 
-        // ---------------------------------------------------------------
         // MESSAGING — only accessible after a successful login
-        // ---------------------------------------------------------------
+        
         if (loggedIn) {
 
-            // Welcome message (required by rubric)
+            // Welcome message 
             System.out.println("\nWelcome to QuickChat.");
 
             // User defines how many messages they want to send this session
@@ -96,9 +95,9 @@ public class Quickchat {
 
                 switch (menuChoice) {
 
-                    // ----------------------------------------------------------
+                    
                     // OPTION 1 — Send a message
-                    // ----------------------------------------------------------
+                   
                     case "1":
                         if (messagesSentThisSession >= numMessages) {
                             System.out.println("You have reached your message limit of " + numMessages + " message(s).");
