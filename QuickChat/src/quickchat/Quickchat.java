@@ -149,26 +149,25 @@ public class Quickchat {
                         }
                         break;
 
-                    // ----------------------------------------------------------
                     // OPTION 2 — Recently sent messages (coming soon)
-                    // ----------------------------------------------------------
+
                     case "2":
                         System.out.println("Coming Soon.");
                         break;
 
-                    // ----------------------------------------------------------
+                    
                     // OPTION 3 — Quit
-                    // ----------------------------------------------------------
+                    
                     case "3":
                         System.out.println("\nTotal messages sent: " + message.getTotalMessagesSent());
                         // Print all sent messages — printMessages() is now static
                         System.out.println(message.printMessages());
                         running = false;
                         break;
-
-                    // ----------------------------------------------------------
-                    // OPTION 4 — Stored Messages sub-menu (Part 3)
-                    // ----------------------------------------------------------
+                        
+                    
+                    // OPTION 4 — Stored Messages sub-menu 
+                    
                     case "4":
                         System.out.println("\na) Display sender and recipient of all stored messages");
                         System.out.println("b) Display the longest stored message");
@@ -223,9 +222,9 @@ public class Quickchat {
                         }
                         break;
 
-                    // ----------------------------------------------------------
+                   
                     // Invalid menu option
-                    // ----------------------------------------------------------
+                    
                     default:
                         System.out.println("Invalid option. Please select 1, 2, 3, or 4.");
                 }
