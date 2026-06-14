@@ -15,5 +15,7 @@ jobs:
       with:
         java-version: '21'
         distribution: 'temurin'
-    - name: Build and Test
-      run: mvn -B test
+    - name: Set up Ant
+      run: sudo apt-get install ant -y
+    - name: Build and Test with Ant
+      run: ant test
